@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1" width="50%">
+    <tr>
+        <td colspan="4"><input type="text" id="input">
+        </td>
+    </tr>
+<br>
+    <tr>
+        <td><button onclick="getValue('1')">1</button></td>
+        <td><button onclick="getValue('2')">2</button></td>
+        <td><button onclick="getValue('3')">3</button></td>
+        <td><button onclick="getValue('+')">+</button></td>
+    </tr>
+<tr>
+    <td><button onclick="getValue('4')">4</button></td>
+    <td><button onclick="getValue('5')">5</button></td>
+    <td><button onclick="getValue('6')">6</button></td>
+    <td><button onclick="getValue('-')">-</button></td>
+</tr>
+<tr>
+    <td><button onclick="getValue('7')">7</button></td>
+    <td><button onclick="getValue('8')">8</button></td>
+    <td><button onclick="getValue('9')">9</button></td>
+    <td><button onclick="getValue('*')">*</button></td>
+</tr>
+<tr>
+    <td><button onclick="res();">C</button></td>
+    <td><button onclick="getValue('0')">0</button></td>
+    <td><button onclick="cal()">=</button></td>
+    <td><button onclick="getValue('/')">/</button></td>
+</tr>
+
+<script>
+    function cal() {
+        let pt = document.getElementById('input').value;
+        let result = eval(pt);
+        alert(pt);
+    }
+    function getValue(value) {
+        console.log(value);
+        document.getElementById('input').value +=value;
+    }
+    function res() {
+        document.getElementById('input').value="";
+    }
+</script>
+</table>
+</body>
+</html>
